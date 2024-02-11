@@ -1,0 +1,294 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Błędy składniowe &mdash; Plezuro 1.0 - dokumentacja</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../_static/css/my_theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="Plezuro 1.0 - dokumentacja" href="../../index.html"/>
+        <link rel="up" title="Specyfikacja" href="../index.html"/>
+        <link rel="next" title="Zmienne" href="../variables/index.html"/>
+        <link rel="prev" title="Operatory" href="../operators/index.html"/> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> Plezuro
+          
+
+          
+            
+            <img src="../../_static/logo.png" class="logo" />
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../tutorial/index.html">Przewodnik</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Specyfikacja</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../token_types/index.html">Typy tokenów</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../whitespaces_and_comments/index.html">Białe znaki i komentarze</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../brackets/index.html">Nawiasy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../constant_tokens/index.html">Stałe tokeny</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../symbols/index.html">Symbole</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../operators/index.html">Operatory</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">Błędy składniowe</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../variables/index.html">Zmienne</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../expressions/index.html">Wyrażenia</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../functions/index.html">Funkcje</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../magic_constants/index.html">Magiczne stałe</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../modules/index.html">Moduły</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../implementation/index.html">Implementacja</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../index.html">Plezuro</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../index.html">Docs</a> &raquo;</li>
+      
+          <li><a href="../index.html">Specyfikacja</a> &raquo;</li>
+      
+    <li>Błędy składniowe</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../../_sources/specification/syntax_errors/index.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="syntax-errors">
+<h1>Błędy składniowe<a class="headerlink" href="#syntax-errors" title="Stały odnośnik do tego nagłówka">¶</a></h1>
+<p>Z powodu bardzo prostej składni jest bardzo mało typów błędów składniowych. Nawet instrukcje warunkowe i pętle są tworzone jako wywołania metod, więc błędy składniowe mogą wystąpić jedynie, gdy tokeny nie są ułożone w odpowiedni sposób.</p>
+<div class="section" id="how-to-handle-syntax-errors">
+<h2>Jak wykryć błędy składniowe?<a class="headerlink" href="#how-to-handle-syntax-errors" title="Stały odnośnik do tego nagłówka">¶</a></h2>
+<p>W Plezuro nie ma fatalnych błędów. Każdy błąd to wyjątek. Kiedy skrypt zawierający błąd składniowy jest importowany, wyjątek powinien zostać wyrzucony. Kompilator powinien stworzyć plik wynikowy (lub funkcję w pliku wynikowym, gdzie wszystkie skrypty są łączone razem), który wyrzuci wyjątek.</p>
+</div>
+<div class="section" id="total-list-of-syntax-errors">
+<h2>Pełna lista błędów składniowych<a class="headerlink" href="#total-list-of-syntax-errors" title="Stały odnośnik do tego nagłówka">¶</a></h2>
+<table border="1" class="docutils">
+<colgroup>
+<col width="43%" />
+<col width="37%" />
+<col width="20%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head"><p class="first last">Nazwa</p>
+</th>
+<th class="head"><p class="first last">Wystąpienie</p>
+</th>
+<th class="head"><p class="first last">Przykłady</p>
+</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>BracketStackException</td>
+<td><p class="first">nawias nie jest domknięty,</p>
+<p>zamknięcie nieodpowiedniego typu nawiasu,</p>
+<p class="last">nadmierne domknięcie nawiasu</p>
+</td>
+<td><p class="first">(2 + 3</p>
+<p>(3 + 1 + [)]</p>
+<p class="last">4 + 5)</p>
+</td>
+</tr>
+<tr class="row-odd"><td>NonExistentTokenException</td>
+<td><p class="first last">token nieistniejącego typu</p>
+</td>
+<td>$αβγ = 21</td>
+</tr>
+<tr class="row-even"><td>OperatorAfterBracketCloseException</td>
+<td><p class="first last">po zamknięciu nawiasu coś innego niż operator lub następne domknięcie nawiasu</p>
+</td>
+<td>$x=[2] &#8220;oo&#8221;</td>
+</tr>
+<tr class="row-odd"><td>OperatorAfterBracketOpenException</td>
+<td><p class="first last">nieodpowiedni operator po otwarciu nawiasu lub początku skryptu</p>
+</td>
+<td>* 43</td>
+</tr>
+<tr class="row-even"><td>OperatorAfterOperatorException</td>
+<td><p class="first last">operator po operatorze (chociaż są wyjątki od tego)</p>
+</td>
+<td>2 + * 5</td>
+</tr>
+<tr class="row-odd"><td>OperatorBeforeBracketCloseException</td>
+<td><p class="first last">operator przed domknięciem nawiasu</p>
+</td>
+<td>(2 + 3 -)</td>
+</tr>
+<tr class="row-even"><td>ValueAfterValueException</td>
+<td><p class="first last">stały token po innym stałym tokenie</p>
+</td>
+<td>3 + *</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../variables/index.html" class="btn btn-neutral float-right" title="Zmienne" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../operators/index.html" class="btn btn-neutral" title="Operatory" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2015, Piotr Sroczkowski.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'1.0',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+      <script type="text/javascript" src="../../_static/js/iframes.js"></script>
+      <script type="text/javascript" src="../../_static/translations.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

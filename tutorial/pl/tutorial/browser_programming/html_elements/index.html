@@ -1,0 +1,284 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Elementy HTML &mdash; Plezuro 1.0 - dokumentacja</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../../_static/css/my_theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="Plezuro 1.0 - dokumentacja" href="../../../index.html"/>
+        <link rel="up" title="Programowanie na przeglądarkę internetową" href="../index.html"/>
+        <link rel="next" title="Metody i zdarzenia HTML DOM" href="../html_dom_methods/index.html"/>
+        <link rel="prev" title="Wyjście" href="../output/index.html"/> 
+
+  
+  <script src="../../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home"> Plezuro
+          
+
+          
+            
+            <img src="../../../_static/logo.png" class="logo" />
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">Przewodnik</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../about/index.html">O Plezuro</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../basics/index.html">Podstawy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../objective/index.html">Programowanie obiektowe</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html">Programowanie na przeglądarkę internetową</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../how_to/index.html">Co i jak</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../output/index.html">Wyjście</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="">Elementy HTML</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../html_dom_methods/index.html">Metody i zdarzenia HTML DOM</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../storage/index.html">Pamięć</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../jQuery/index.html">jQuery</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ajax/index.html">AJAX</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../angular/index.html">AngularJS</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../specification/index.html">Specyfikacja</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../implementation/index.html">Implementacja</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../../index.html">Plezuro</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../../index.html">Docs</a> &raquo;</li>
+      
+          <li><a href="../../index.html">Przewodnik</a> &raquo;</li>
+      
+          <li><a href="../index.html">Programowanie na przeglądarkę internetową</a> &raquo;</li>
+      
+    <li>Elementy HTML</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../../../_sources/tutorial/browser_programming/html_elements/index.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="html-elements">
+<h1>Elementy HTML<a class="headerlink" href="#html-elements" title="Stały odnośnik do tego nagłówka">¶</a></h1>
+<p>W programowaniu HTML (nie każde programowanie na przeglądarkę internetową to programowanie HTML, ponieważ istnieją takie technologie jak aplety Java, Adobe Flash czy Silverlight, jednakże są one przestarzałe) prawie wszystko, co widzisz w przeglądarce to elementy HTML. Wyjątkami są alerty i różne rodzaje powiadomień z przeglądarki.</p>
+<p>To potężne narzędzie. W programowaniu aplikacji desktopowych w większości frameworków nie ma takiego narzędzie i to czyni programowanie GUI znacznie trudniejszym.</p>
+<div class="section" id="html-dom">
+<h2>HTML DOM<a class="headerlink" href="#html-dom" title="Stały odnośnik do tego nagłówka">¶</a></h2>
+<p>Ten skrót oznacza Document Object Model (dokumentowo-obiektowy model). Przedstawia drzewo obiektów.</p>
+<p><strong>Czym jest element HTML?</strong></p>
+<p>Może być najmniejszą niepodzielną częścią widoku, który widzisz w przeglądarce (np. input, button, span), jak również tym, czego nie możesz zobaczyć (ponieważ jest ukryty, ma rozmiar 0 lub nie zawiera żadnego tekstu) albo ewentualnie drzewem innych elementów.</p>
+<p><strong>Czym jest drzewo?</strong></p>
+<p>Możemy sobie wyobrazić drzewo obiektów na kształt prawdziwego drzewa. Każdy element (węzeł) to miejsce, gdzie jedna gałąź rozdziela się na wiele gałęzi (w szczególnym przypadku nadal jedno), liść (gdzie drzewo się kończy) lub początek drzewa (gdzie wyrasta z ziemi).</p>
+<p><strong>Relacje w drzewie</strong></p>
+<p>Jeden element dla innego może być:</p>
+<ul class="simple">
+<li><p class="first">dzieckiem - child (w szczególnym przypadku pierwszym dzieckiem - first child)</p>
+</li>
+<li><p class="first">rodzicem - parent</p>
+</li>
+<li><p class="first">rodzeństwem - sibling (w szczególnym przypadku następnym rodzeństwem  - next sibling)</p>
+</li>
+<li><p class="first">przodkiem - ancestor</p>
+</li>
+<li><p class="first">potomkiem - offspring</p>
+</li>
+<li><p class="first">niczym z powyższych</p>
+</li>
+</ul>
+<p>Zauważmy, że dziecko jest jednocześnie potomkiem, jak również rodzic jest jednocześnie przodkiem.</p>
+<p>Skoro już znasz podstawy HTML, powinieneś wiedzieć, że zewnętrznym elementem jest HTML. Tak na prawdę to dziecko elementu document, który to jest najbardziej zewnętrznym elementem w całym HTML DOM.</p>
+<p><strong>Dlaczego jest to tak ważne?</strong></p>
+<p>Znając element, możesz operować na jego dzieciach, rodzeństwie, rodzicu. Możesz zmieniać kolejność dzieci, kopiować poddrzewo i tak dalej.</p>
+<p><strong>Co Plezuro może zrobić?</strong></p>
+<ul class="simple">
+<li><p class="first">zmieniać elementy HTML (np. tekst)</p>
+</li>
+<li><p class="first">dodawać elementy HTML</p>
+</li>
+<li><p class="first">usuwać elementy HTML</p>
+</li>
+<li><p class="first">klonować elementy HTML</p>
+</li>
+<li><p class="first">zmieniać atrybuty HTML</p>
+</li>
+<li><p class="first">dodawać atrybuty HTML</p>
+</li>
+<li><p class="first">usuwać atrybuty HTML</p>
+</li>
+<li><p class="first">zmieniać style CSS</p>
+</li>
+<li><p class="first">tworzyć nowe zdarzenia HTML</p>
+</li>
+</ul>
+<p>Z tego wynikają dodatkowe możliwości. Np. klonując, usuwając i dodając element, możesz zmieniać jego położenie.</p>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../html_dom_methods/index.html" class="btn btn-neutral float-right" title="Metody i zdarzenia HTML DOM" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../output/index.html" class="btn btn-neutral" title="Wyjście" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2015, Piotr Sroczkowski.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../../',
+            VERSION:'1.0',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../../_static/doctools.js"></script>
+      <script type="text/javascript" src="../../../_static/js/iframes.js"></script>
+      <script type="text/javascript" src="../../../_static/translations.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

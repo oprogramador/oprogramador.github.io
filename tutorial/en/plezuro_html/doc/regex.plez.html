@@ -1,0 +1,61 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<title>~/pierre_copy/programming/java/plezuro_js/src/plezuro/doc/regex.plez.html</title>
+<meta name="Generator" content="Vim/7.4">
+<meta name="plugin-version" content="vim7.4_v1">
+<meta name="syntax" content="plezuro">
+<meta name="settings" content="use_css,pre_wrap,no_foldcolumn,expand_tabs,prevent_copy=">
+<meta name="colorscheme" content="none">
+<style type="text/css">
+<!--
+pre { white-space: pre-wrap; font-family: monospace; color: #ffffff; background-color: #000000; }
+body { font-family: monospace; color: #ffffff; background-color: #000000; }
+* { font-size: 1em; }
+.String { color: #ffff00; }
+.Statement { color: #ffff00; font-weight: bold; }
+.Comment { color: #00ff00; font-weight: bold; }
+.Special { color: #ff6060; font-weight: bold; }
+.Identifier { color: #00ffff; font-weight: bold; }
+-->
+</style>
+
+<script type='text/javascript'>
+<!--
+
+-->
+</script>
+</head>
+<body>
+<pre id='vimCodeElement'>
+<span class="Statement">$x</span> = <span class="String">r'[a-z]'</span>;
+<span class="Statement">$b</span> = <span class="Identifier">x</span> =~ <span class="String">'abc'</span>;
+<span class="Statement">$b1</span> = <span class="String">'dfg'</span> =~ <span class="Identifier">x</span>;
+<span class="Statement">$b2</span> = <span class="String">'dfg'</span> !~ <span class="Identifier">x</span>;
+<span class="Statement">$b3</span> = <span class="Identifier">x</span> !~ <span class="String">'xxx'</span>;
+<span class="Statement">$res</span> = [<span class="Identifier">x</span>, <span class="Identifier">b</span>, <span class="Identifier">b1</span>, <span class="Identifier">b2</span>, <span class="Identifier">b3</span>];
+<span class="Identifier">res</span> &lt;&lt; <span class="String">'gh-kk'</span> =~ <span class="String">r'[a-z]'</span>                <span class="Comment">// true</span>
+    &lt;&lt; <span class="String">'gh-kk'</span> =~ <span class="String">r'^[a-z]$'</span>              <span class="Comment">// false</span>
+    &lt;&lt; <span class="String">'gh-kk'</span> =~ <span class="String">r'^[a-z]+-[a-z]+$'</span>      <span class="Comment">// true</span>
+    &lt;&lt; <span class="String">'gh-kk'</span> =~ <span class="String">r'^[a-z]{2}-[a-z]{2}$'</span>  <span class="Comment">// true</span>
+    &lt;&lt; <span class="String">'gh-kko'</span> =~ <span class="String">r'^[a-z]{2}-[a-z]{2}$'</span> <span class="Comment">// false</span>
+    &lt;&lt; <span class="String">'</span><span class="Special">\\</span><span class="String">'</span> =~ <span class="String">r'^</span><span class="Special">\\</span><span class="String">$'</span>                    <span class="Comment">// true</span>
+    &lt;&lt; <span class="String">'</span><span class="Special">\\</span><span class="String">'</span> =~ <span class="String">r'</span><span class="Special">\\</span><span class="String">'</span>                      <span class="Comment">// true</span>
+    &lt;&lt; <span class="String">'</span><span class="Special">\\</span><span class="String">'</span> =~ <span class="String">r&quot;</span><span class="Special">\\</span><span class="String">&quot;</span>                      <span class="Comment">// true</span>
+    &lt;&lt; <span class="String">'0+9'</span> =~ <span class="String">r&quot;^[0-9]</span><span class="Special">\+</span><span class="String">[0-9]$&quot;</span>         <span class="Comment">// true</span>
+    &lt;&lt; <span class="String">'0+97'</span> =~ <span class="String">r&quot;^[0-9]</span><span class="Special">\+</span><span class="String">[0-9]$&quot;</span>        <span class="Comment">// false</span>
+    &lt;&lt; <span class="String">'a&quot;k'</span> =~ <span class="String">r&quot;^a&quot;</span><span class="String">&quot;k&quot;</span>                  <span class="Comment">// true</span>
+    &lt;&lt; <span class="String">'ak'</span> =~ <span class="String">r&quot;^a&quot;</span><span class="String">&quot;k&quot;</span>                   <span class="Comment">// false</span>
+    &lt;&lt; <span class="String">'a&quot;k'</span> =~ <span class="String">r'^a&quot;&quot;k'</span>                  <span class="Comment">// true</span>
+    &lt;&lt; <span class="String">'a&quot;k'</span> =~ <span class="String">r'^a&quot;k'</span>                   <span class="Comment">// true</span>
+    &lt;&lt; <span class="String">&quot;a'k&quot;</span> =~ <span class="String">r'^a'</span><span class="String">'k'</span>                  <span class="Comment">// true</span>
+    &lt;&lt; <span class="String">&quot;ak&quot;</span> =~ <span class="String">r'^a'</span><span class="String">'k'</span>                   <span class="Comment">// false</span>
+    &lt;&lt; <span class="String">&quot;a'k&quot;</span> =~ <span class="String">r&quot;^a''k&quot;</span>                  <span class="Comment">// true</span>
+    &lt;&lt; <span class="String">&quot;a'k&quot;</span> =~ <span class="String">r&quot;^a'k&quot;</span>                   <span class="Comment">// true</span>
+;
+<span class="Identifier">res</span>
+</pre>
+</body>
+</html>
+<!-- vim: set foldmethod=manual : -->

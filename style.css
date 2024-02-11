@@ -1,0 +1,29 @@
+html {
+    display: table;
+    margin: auto;
+}
+html, body {
+    height: 100%;
+}
+body {
+    background-color: #ffffd0;
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+}
+a {
+    border: 3px green ridge;
+    text-decoration: none;
+}
+h1, h2, h3 {
+    color: #d00000;
+}
+a:hover {
+    color: white;
+    background-color: green;
+}
+div {
+    border: 1px solid green;
+    margin: 20px;
+    min-height: 60px;
+}

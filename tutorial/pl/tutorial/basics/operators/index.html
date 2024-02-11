@@ -1,0 +1,426 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Operatory &mdash; Plezuro 1.0 - dokumentacja</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../../_static/css/my_theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="Plezuro 1.0 - dokumentacja" href="../../../index.html"/>
+        <link rel="up" title="Podstawy" href="../index.html"/>
+        <link rel="next" title="Instrukcje warunkowe" href="../conditions/index.html"/>
+        <link rel="prev" title="Kolekcje" href="../collections/index.html"/> 
+
+  
+  <script src="../../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home"> Plezuro
+          
+
+          
+            
+            <img src="../../../_static/logo.png" class="logo" />
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">Przewodnik</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../about/index.html">O Plezuro</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html">Podstawy</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../hello_world/index.html">Hello world</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../variables/index.html">Zmienne</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../comments/index.html">Komentarze</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../functions/index.html">Funkcje</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../builtin_methods/index.html">Wbudowane metody</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../collections/index.html">Kolekcje</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="">Operatory</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../conditions/index.html">Instrukcje warunkowe</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../loops/index.html">Pętle</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../range/index.html">Przedział (range)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../import/index.html">Import</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../random/index.html">Losowanie (random)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../regex/index.html">Regex</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../magic_constants/index.html">Magiczne stałe</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../exceptions/index.html">Wyjątki</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../objective/index.html">Programowanie obiektowe</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../browser_programming/index.html">Programowanie na przeglądarkę internetową</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../specification/index.html">Specyfikacja</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../implementation/index.html">Implementacja</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../../index.html">Plezuro</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../../index.html">Docs</a> &raquo;</li>
+      
+          <li><a href="../../index.html">Przewodnik</a> &raquo;</li>
+      
+          <li><a href="../index.html">Podstawy</a> &raquo;</li>
+      
+    <li>Operatory</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../../../_sources/tutorial/basics/operators/index.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="operators">
+<h1>Operatory<a class="headerlink" href="#operators" title="Stały odnośnik do tego nagłówka">¶</a></h1>
+<p>Jedną z ważnych możliwości języka programowania jest użycie operatorów. Technicznie byłoby możliwe stworzyć język bez operatorów. Jednak uproszczają one bardzo składnię. Na przykład w wyrażeniu <code class="docutils literal"><span class="pre">1+3</span></code> mamy operator <code class="docutils literal"><span class="pre">+</span></code>, który wykonuje dodawanie. W porównaniu z innymi językami, Plezuro posiada pewne specjalne operatory takie jak przecinek <code class="docutils literal"><span class="pre">,</span></code> czy średnik <code class="docutils literal"><span class="pre">;</span></code>.</p>
+<p>Ważną sprawą w Plezuro jest to, że nie można mieć żadnego operatora bezpośrednio (nie licząc białych znaków i komentarzy) przed zamknięciem jakiegokolwiek nawiasu (``)``, <code class="docutils literal"><span class="pre">]</span></code>, <code class="docutils literal"><span class="pre">}</span></code>). Zatem po ostatnim elemencie listy nie można postawić przecinka a także po ostatnim wyrażeniu funkcji nie można postawić średnika. W takim przypadku doszłoby do błędu składniowego.</p>
+<p>Akcja operatora zależy od typu zerowego argumentu. Działanie jest identyczne jak w przypadku wywołania metody. Jest możliwe zmienić akcję operatorów w trakcie wykonywania programu (możesz nawet spowodować, że wyrażenie <cite>2+2</cite> zwróci wynik inny niż 4, więc nie jest zalecane używać tego nadmiernie)</p>
+<p>Ogólnie możemy wyróżnić pewne główne akcje operatorów (np. dla liczb i stringów).</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="29%" />
+<col width="13%" />
+<col width="21%" />
+<col width="19%" />
+<col width="18%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head"><p class="first last">Typ lewego argumentu</p>
+</th>
+<th class="head">Operator</th>
+<th class="head"><p class="first last">Akcja</p>
+</th>
+<th class="head"><p class="first last">Przykład</p>
+</th>
+<th class="head"><p class="first last">Wynik</p>
+</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><p class="first last">Liczba (Number)</p>
+</td>
+<td><code class="docutils literal"><span class="pre">+</span></code></td>
+<td><p class="first last">dodawanie</p>
+</td>
+<td><code class="docutils literal"><span class="pre">1+4</span></code></td>
+<td><code class="docutils literal"><span class="pre">5</span></code></td>
+</tr>
+<tr class="row-odd"><td><p class="first last">Liczba (Number)</p>
+</td>
+<td><code class="docutils literal"><span class="pre">-</span></code></td>
+<td><p class="first last">odejmowanie</p>
+</td>
+<td><code class="docutils literal"><span class="pre">4-7</span></code></td>
+<td><code class="docutils literal"><span class="pre">-3</span></code></td>
+</tr>
+<tr class="row-even"><td><p class="first last">Liczba (Number)</p>
+</td>
+<td><code class="docutils literal"><span class="pre">*</span></code></td>
+<td><p class="first last">mnożenie</p>
+</td>
+<td><code class="docutils literal"><span class="pre">8.5*2</span></code></td>
+<td><code class="docutils literal"><span class="pre">17</span></code></td>
+</tr>
+<tr class="row-odd"><td><p class="first last">Liczba (Number)</p>
+</td>
+<td><code class="docutils literal"><span class="pre">/</span></code></td>
+<td><p class="first last">dzielenie</p>
+</td>
+<td><code class="docutils literal"><span class="pre">1/4</span></code></td>
+<td><code class="docutils literal"><span class="pre">0.25</span></code></td>
+</tr>
+<tr class="row-even"><td><p class="first last">Liczba (Number)</p>
+</td>
+<td><code class="docutils literal"><span class="pre">^</span></code></td>
+<td><p class="first last">potęga</p>
+</td>
+<td><code class="docutils literal"><span class="pre">4^3</span></code></td>
+<td><code class="docutils literal"><span class="pre">64</span></code></td>
+</tr>
+<tr class="row-odd"><td><p class="first last">Liczba (Number)</p>
+</td>
+<td><code class="docutils literal"><span class="pre">%</span></code></td>
+<td><p class="first last">reszta z dzielenia</p>
+</td>
+<td><code class="docutils literal"><span class="pre">7%3</span></code></td>
+<td><code class="docutils literal"><span class="pre">1</span></code></td>
+</tr>
+<tr class="row-even"><td>String</td>
+<td><code class="docutils literal"><span class="pre">+</span></code></td>
+<td><p class="first last">konkatenacja</p>
+</td>
+<td><code class="docutils literal"><span class="pre">'a'+'b'</span></code></td>
+<td><code class="docutils literal"><span class="pre">'ab'</span></code></td>
+</tr>
+<tr class="row-odd"><td>String</td>
+<td><code class="docutils literal"><span class="pre">*</span></code></td>
+<td><p class="first last">mnożenie</p>
+</td>
+<td><code class="docutils literal"><span class="pre">'a'\*3</span></code></td>
+<td><code class="docutils literal"><span class="pre">'aaa'</span></code></td>
+</tr>
+<tr class="row-even"><td><p class="first last">Lista (List)</p>
+</td>
+<td><code class="docutils literal"><span class="pre">+</span></code></td>
+<td><p class="first last">konkatenacja</p>
+</td>
+<td><code class="docutils literal"><span class="pre">[2,3]+[1]</span></code></td>
+<td><code class="docutils literal"><span class="pre">[2,3,1]</span></code></td>
+</tr>
+<tr class="row-odd"><td><p class="first last">Lista (List)</p>
+</td>
+<td><code class="docutils literal"><span class="pre">*</span></code></td>
+<td><p class="first last">mnożenie</p>
+</td>
+<td><code class="docutils literal"><span class="pre">[2,3]*2</span></code></td>
+<td><code class="docutils literal"><span class="pre">[2,3,2,3]</span></code></td>
+</tr>
+</tbody>
+</table>
+<p><div class="plezuro_source_container"><iframe class="plezuro_source" src="../../../plezuro_html/doc/operators.plez.html"></iframe></div></p>
+<p>Istnieją również operatory złożone, które stanowią pewne udogodnienie (syntactic sugar) np. <code class="docutils literal"><span class="pre">a</span> <span class="pre">+=</span> <span class="pre">b</span></code> oznacza <code class="docutils literal"><span class="pre">a</span> <span class="pre">=</span> <span class="pre">a</span> <span class="pre">+</span> <span class="pre">b</span></code>.</p>
+<p>Pełna lista operatorów złożonych:</p>
+<ul class="simple">
+<li><code class="docutils literal"><span class="pre">+=</span></code></li>
+<li><code class="docutils literal"><span class="pre">-=</span></code></li>
+<li><code class="docutils literal"><span class="pre">*=</span></code></li>
+<li><code class="docutils literal"><span class="pre">/=</span></code></li>
+<li><code class="docutils literal"><span class="pre">^=</span></code></li>
+<li><code class="docutils literal"><span class="pre">&amp;=</span></code></li>
+<li><code class="docutils literal"><span class="pre">|=</span></code></li>
+<li><code class="docutils literal"><span class="pre">%=</span></code></li>
+<li><code class="docutils literal"><span class="pre">.=</span></code></li>
+</ul>
+<p>Pełna lista operatorów:</p>
+<ul>
+<li><p class="first">jednoargumentowe operatory (operator po lewej, argument po prawej)</p>
+<blockquote>
+<div><ul class="simple">
+<li><code class="docutils literal"><span class="pre">!</span></code></li>
+<li><code class="docutils literal"><span class="pre">&amp;&amp;</span></code></li>
+<li><code class="docutils literal"><span class="pre">**</span></code></li>
+<li><code class="docutils literal"><span class="pre">#</span></code></li>
+<li><code class="docutils literal"><span class="pre">~</span></code></li>
+<li><code class="docutils literal"><span class="pre">=&gt;</span></code></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p class="first">jednoargumentowe operatory (operator po prawej stronie)</p>
+<blockquote>
+<div><ul class="simple">
+<li><code class="docutils literal"><span class="pre">++</span></code></li>
+<li><code class="docutils literal"><span class="pre">--</span></code></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p class="first">dwuargumentowe operatory (zerowy argument, operator, pierwszy argument)</p>
+<blockquote>
+<div><ul class="simple">
+<li><code class="docutils literal"><span class="pre">;</span></code></li>
+<li><code class="docutils literal"><span class="pre">,</span></code></li>
+<li><code class="docutils literal"><span class="pre">:=</span></code></li>
+<li><code class="docutils literal"><span class="pre">=</span></code></li>
+<li><code class="docutils literal"><span class="pre">+=</span></code></li>
+<li><code class="docutils literal"><span class="pre">-=</span></code></li>
+<li><code class="docutils literal"><span class="pre">*=</span></code></li>
+<li><code class="docutils literal"><span class="pre">=</span></code></li>
+<li><code class="docutils literal"><span class="pre">^=</span></code></li>
+<li><code class="docutils literal"><span class="pre">&amp;=</span></code></li>
+<li><code class="docutils literal"><span class="pre">|=</span></code></li>
+<li><code class="docutils literal"><span class="pre">%=</span></code></li>
+<li><code class="docutils literal"><span class="pre">.=</span></code></li>
+<li><code class="docutils literal"><span class="pre">~~</span></code></li>
+<li><code class="docutils literal"><span class="pre">&lt;-&gt;</span></code></li>
+<li><code class="docutils literal"><span class="pre">&lt;&lt;</span></code></li>
+<li><code class="docutils literal"><span class="pre">&gt;&gt;</span></code></li>
+<li><code class="docutils literal"><span class="pre">?</span></code></li>
+<li><code class="docutils literal"><span class="pre">|</span></code></li>
+<li><code class="docutils literal"><span class="pre">&amp;</span></code></li>
+<li><code class="docutils literal"><span class="pre">&lt;=&gt;</span></code></li>
+<li><code class="docutils literal"><span class="pre">&gt;=</span></code></li>
+<li><code class="docutils literal"><span class="pre">&gt;</span></code></li>
+<li><code class="docutils literal"><span class="pre">&lt;=</span></code></li>
+<li><code class="docutils literal"><span class="pre">&lt;</span></code></li>
+<li><code class="docutils literal"><span class="pre">!=</span></code></li>
+<li><code class="docutils literal"><span class="pre">==</span></code></li>
+<li><code class="docutils literal"><span class="pre">!==</span></code></li>
+<li><code class="docutils literal"><span class="pre">===</span></code></li>
+<li><code class="docutils literal"><span class="pre">=~</span></code></li>
+<li><code class="docutils literal"><span class="pre">!~</span></code></li>
+<li><code class="docutils literal"><span class="pre">+</span></code></li>
+<li><code class="docutils literal"><span class="pre">-</span></code></li>
+<li><code class="docutils literal"><span class="pre">%</span></code></li>
+<li><code class="docutils literal"><span class="pre">*</span></code></li>
+<li><code class="docutils literal"><span class="pre">/</span></code></li>
+<li><code class="docutils literal"><span class="pre">^</span></code></li>
+<li><code class="docutils literal"><span class="pre">^^</span></code></li>
+<li><code class="docutils literal"><span class="pre">.</span></code></li>
+<li><code class="docutils literal"><span class="pre">..</span></code></li>
+<li><code class="docutils literal"><span class="pre">:</span></code></li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../conditions/index.html" class="btn btn-neutral float-right" title="Instrukcje warunkowe" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../collections/index.html" class="btn btn-neutral" title="Kolekcje" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2015, Piotr Sroczkowski.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../../',
+            VERSION:'1.0',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../../_static/doctools.js"></script>
+      <script type="text/javascript" src="../../../_static/js/iframes.js"></script>
+      <script type="text/javascript" src="../../../_static/translations.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

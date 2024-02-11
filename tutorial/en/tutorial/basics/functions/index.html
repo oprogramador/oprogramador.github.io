@@ -1,0 +1,251 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Functions &mdash; Plezuro 1.0 documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../../_static/css/my_theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="Plezuro 1.0 documentation" href="../../../index.html"/>
+        <link rel="up" title="Basics" href="../index.html"/>
+        <link rel="next" title="Built-in methods" href="../builtin_methods/index.html"/>
+        <link rel="prev" title="Comments" href="../comments/index.html"/> 
+
+  
+  <script src="../../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home"> Plezuro
+          
+
+          
+            
+            <img src="../../../_static/logo.png" class="logo" />
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">Tutorial</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../about/index.html">About Plezuro</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html">Basics</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../hello_world/index.html">Hello world</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../variables/index.html">Variables</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../comments/index.html">Comments</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="">Functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../builtin_methods/index.html">Built-in methods</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../collections/index.html">Collections</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../operators/index.html">Operators</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../conditions/index.html">Conditions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../loops/index.html">Loops</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../range/index.html">Range</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../import/index.html">Import</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../random/index.html">Random</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../regex/index.html">Regex</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../magic_constants/index.html">Magic constants</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../exceptions/index.html">Exceptions</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../objective/index.html">Objective programming</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../browser_programming/index.html">Web browser programming</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../specification/index.html">Specification</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../implementation/index.html">Implementation</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../../index.html">Plezuro</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../../index.html">Docs</a> &raquo;</li>
+      
+          <li><a href="../../index.html">Tutorial</a> &raquo;</li>
+      
+          <li><a href="../index.html">Basics</a> &raquo;</li>
+      
+    <li>Functions</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../../../_sources/tutorial/basics/functions/index.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="functions">
+<h1>Functions<a class="headerlink" href="#functions" title="Permalink to this headline">¶</a></h1>
+<p>To write a function, you use just the curlies (<code class="docutils literal"><span class="pre">{</span></code>, <code class="docutils literal"><span class="pre">}</span></code>). Everything in a curly bracket is a function.
+It includes also conditionals and loops. The zero argument is accessible via the keyword &#8216;this&#8217; and
+the next ones &#8216;first&#8217;, &#8216;second&#8217; and &#8216;third&#8217;. You have also access to the array of the arguments
+using the keyword &#8216;args&#8217;.</p>
+<p>The function returns the value of the last statement (like in Ruby). There is no <code class="docutils literal"><span class="pre">return</span></code> keyword.</p>
+<p><div class="plezuro_source_container"><iframe class="plezuro_source" src="../../../plezuro_html/doc/function.plez.html"></iframe></div></p>
+<p>To count the execution time of a function, use method &#8216;time&#8217;. The arguments passed to this method
+are next passed to the function (first argument becomes zero argument, second argument becomes first
+and so on).</p>
+<p>It returns an object with fields:</p>
+<ul class="simple">
+<li><code class="docutils literal"><span class="pre">result</span></code> - value returned by the function</li>
+<li><code class="docutils literal"><span class="pre">time</span></code> - execution time in seconds</li>
+</ul>
+<p><div class="plezuro_source_container"><iframe class="plezuro_source" src="../../../plezuro_html/doc/function_time.plez.html"></iframe></div></p>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../builtin_methods/index.html" class="btn btn-neutral float-right" title="Built-in methods" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../comments/index.html" class="btn btn-neutral" title="Comments" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2015, Piotr Sroczkowski.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../../',
+            VERSION:'1.0',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../../_static/doctools.js"></script>
+      <script type="text/javascript" src="../../../_static/js/iframes.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

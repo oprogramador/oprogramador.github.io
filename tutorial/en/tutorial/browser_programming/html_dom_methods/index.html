@@ -1,0 +1,328 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>HTML DOM methods and events &mdash; Plezuro 1.0 documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../../_static/css/my_theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="Plezuro 1.0 documentation" href="../../../index.html"/>
+        <link rel="up" title="Web browser programming" href="../index.html"/>
+        <link rel="next" title="Storage" href="../storage/index.html"/>
+        <link rel="prev" title="HTML elements" href="../html_elements/index.html"/> 
+
+  
+  <script src="../../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home"> Plezuro
+          
+
+          
+            
+            <img src="../../../_static/logo.png" class="logo" />
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">Tutorial</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../about/index.html">About Plezuro</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../basics/index.html">Basics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../objective/index.html">Objective programming</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html">Web browser programming</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../how_to/index.html">How to</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../output/index.html">Output</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../html_elements/index.html">HTML elements</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="">HTML DOM methods and events</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../storage/index.html">Storage</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../jQuery/index.html">jQuery</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ajax/index.html">AJAX</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../angular/index.html">AngularJS</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../specification/index.html">Specification</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../implementation/index.html">Implementation</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../../index.html">Plezuro</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../../index.html">Docs</a> &raquo;</li>
+      
+          <li><a href="../../index.html">Tutorial</a> &raquo;</li>
+      
+          <li><a href="../index.html">Web browser programming</a> &raquo;</li>
+      
+    <li>HTML DOM methods and events</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../../../_sources/tutorial/browser_programming/html_dom_methods/index.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="html-dom-methods-and-events">
+<h1>HTML DOM methods and events<a class="headerlink" href="#html-dom-methods-and-events" title="Permalink to this headline">¶</a></h1>
+<p>After previous chapters you are able to create any HTML document statically with
+<code class="docutils literal"><span class="pre">doument.write</span></code>. But probably you wonder to create an interactive app. For
+example after button pressing an input will change its value.</p>
+<div class="section" id="how-to-get-an-element">
+<h2>How to get an element?<a class="headerlink" href="#how-to-get-an-element" title="Permalink to this headline">¶</a></h2>
+<p>You can use the standard Javascript methods in Plezuro. Eventually you can use
+some methods from external libraries such like jQuery.</p>
+<p><strong>document.getElementById</strong></p>
+<p>It returns the element with matching &#8216;id&#8217; attribute. Remember if you include
+your script in the HEAD section, the elements are not loaded so you cannot
+immediately get any element, in this case you should use the proper event.</p>
+<p><strong>document.getElementsByTagName</strong></p>
+<p>It returns the collection of all the elements of the tag name specified as the first
+argument. For example <code class="docutils literal"><span class="pre">document.getElementsByTagName('div')</span></code> will return the
+collection of all divs in the document.</p>
+<p><strong>document.getElementsByName</strong></p>
+<p>The collection of all the elements with the value of &#8216;name&#8217; attribute
+specified as the first argument.</p>
+<p><strong>document.getElementsByClassName</strong></p>
+<p>The collection of all the elements with the value of &#8216;class&#8217; attribute
+specified as the first argument.</p>
+<p><strong>document.getElementsByTagNameNS</strong></p>
+<p>Similar to getElementsByTagName but the first argument specifies the name of
+the namespace and the second one the tag name. It is used rather in XML DOM.</p>
+<p><strong>document.querySelector</strong></p>
+<p>It returns the first element that matches the CSS selector in the first
+argument. For example <code class="docutils literal"><span class="pre">document.querySelector('table</span> <span class="pre">button')</span></code> will return the
+first button in the first table that contain a button.</p>
+<p><strong>document.querySelectorAll</strong></p>
+<p>It returns the collection of all the elements that match to the given CSS selector.</p>
+</div>
+<div class="section" id="how-to-operate-on-elements">
+<h2>How to operate on elements?<a class="headerlink" href="#how-to-operate-on-elements" title="Permalink to this headline">¶</a></h2>
+<p><strong>innerHTML</strong></p>
+<p>It is the simplest way to change the content of an element, it just inserts any
+HTML into the element. For example <code class="docutils literal"><span class="pre">element['innerHTML']</span> <span class="pre">=</span>
+<span class="pre">'&lt;button&gt;OK&lt;/button&gt;'</span></code>.</p>
+<p><strong>setAttribute</strong></p>
+<p>For example <code class="docutils literal"><span class="pre">element.setAttribute('name',</span> <span class="pre">'age')</span></code></p>
+<p><strong>style</strong></p>
+<p>You can change the CSS style. You can use the CSS name with a hyphen <code class="docutils literal"><span class="pre">-</span></code>
+as well the camelcase. For example
+<code class="docutils literal"><span class="pre">element['style']['backgroundColor']</span> <span class="pre">=</span> <span class="pre">'red'</span></code></p>
+<p><strong>document.createElement</strong></p>
+<p>You can create an element. The first argument specifies the tag name. For
+example, to create a div, you write <code class="docutils literal"><span class="pre">document.createElement('div')</span></code>.</p>
+<p><strong>document.appendChild</strong></p>
+<p>When you have just created an element you can add it to another element either
+existing in the HTML DOM or not.</p>
+<p><strong>document.removeChild</strong></p>
+<p>You can remove an element specified as the first argument.</p>
+<p><strong>document.replaceChild</strong></p>
+<p>You can replace an element passed as the first argument to an element passed as
+the second argument.</p>
+<p><strong>document.createTextNode</strong></p>
+<p>You can create a text node with the value specified as the first argument and
+then append such a node to an element.</p>
+</div>
+<div class="section" id="how-to-listen-to-en-event">
+<h2>How to listen to en event?<a class="headerlink" href="#how-to-listen-to-en-event" title="Permalink to this headline">¶</a></h2>
+<p>To provide some interaction it is useful to listen to the events. We can detect
+among others: a mouse click, a key pressing, a document being loaded, a document
+mutation, an object mutation, browser window resizing.</p>
+<p>You can see the full list of events for Firefox on
+<a class="reference external" href="https://developer.mozilla.org/en-US/docs/Web/Events">https://developer.mozilla.org/en-US/docs/Web/Events</a>, or for any browser on
+<a class="reference external" href="http://www.w3schools.com/tags/ref_eventattributes.asp">http://www.w3schools.com/tags/ref_eventattributes.asp</a>.</p>
+<p>Let us enumerate the most important ones.</p>
+<p><strong>onclick</strong></p>
+<p>It fires after the mouse click (pressing and releasing the mouse button). For
+example <code class="docutils literal"><span class="pre">element['onclick']</span> <span class="pre">=</span> <span class="pre">{</span> <span class="pre">this['parentNode'].removeChild(this);</span> <span class="pre">null</span> <span class="pre">}</span></code></p>
+<p><strong>onkeydown</strong></p>
+<p>It fires after a key being pressed.</p>
+<p><strong>onkeypress</strong></p>
+<p>It fires when a key is being pressed (even multiple times).</p>
+<p><strong>onkeyup</strong></p>
+<p>It fires after a key being released.</p>
+<div class="literal-block-wrapper container" id="dom-methods-index-html">
+<div class="code-block-caption"><span class="caption-text">dom_methods/index.html</span><a class="headerlink" href="#dom-methods-index-html" title="Permalink to this code">¶</a></div>
+<div class="highlight-html"><div class="highlight"><pre><span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">&quot;a&quot;</span><span class="p">&gt;</span>a=<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;&lt;</span><span class="nt">input</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;a&quot;</span><span class="p">/&gt;</span>
+<span class="p">&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">&quot;b&quot;</span><span class="p">&gt;</span>b=<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;&lt;</span><span class="nt">input</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;b&quot;</span><span class="p">/&gt;</span>
+<span class="p">&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">&quot;c&quot;</span><span class="p">&gt;</span>c=<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;&lt;</span><span class="nt">input</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;c&quot;</span> <span class="na">disabled</span><span class="p">/&gt;</span>
+<span class="p">&lt;</span><span class="nt">button</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;mainButton&quot;</span><span class="p">&gt;</span>OK<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+
+
+<span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;../../../plezuro.js&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;main.plez.js&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+
+<span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+</div>
+<p>dom_methods/main.plez
+<div class="plezuro_source_container"><iframe class="plezuro_source" src="../../../plezuro_html/doc/web/dom_methods/main.plez.html"></iframe></div></p>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../storage/index.html" class="btn btn-neutral float-right" title="Storage" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../html_elements/index.html" class="btn btn-neutral" title="HTML elements" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2015, Piotr Sroczkowski.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../../',
+            VERSION:'1.0',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../../_static/doctools.js"></script>
+      <script type="text/javascript" src="../../../_static/js/iframes.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

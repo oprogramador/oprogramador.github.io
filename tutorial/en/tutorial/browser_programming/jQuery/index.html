@@ -1,0 +1,283 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>jQuery &mdash; Plezuro 1.0 documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../../_static/css/my_theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="Plezuro 1.0 documentation" href="../../../index.html"/>
+        <link rel="up" title="Web browser programming" href="../index.html"/>
+        <link rel="next" title="AJAX" href="../ajax/index.html"/>
+        <link rel="prev" title="Storage" href="../storage/index.html"/> 
+
+  
+  <script src="../../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home"> Plezuro
+          
+
+          
+            
+            <img src="../../../_static/logo.png" class="logo" />
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">Tutorial</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../about/index.html">About Plezuro</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../basics/index.html">Basics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../objective/index.html">Objective programming</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html">Web browser programming</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../how_to/index.html">How to</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../output/index.html">Output</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../html_elements/index.html">HTML elements</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../html_dom_methods/index.html">HTML DOM methods and events</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../storage/index.html">Storage</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="">jQuery</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ajax/index.html">AJAX</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../angular/index.html">AngularJS</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../specification/index.html">Specification</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../implementation/index.html">Implementation</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../../index.html">Plezuro</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../../index.html">Docs</a> &raquo;</li>
+      
+          <li><a href="../../index.html">Tutorial</a> &raquo;</li>
+      
+          <li><a href="../index.html">Web browser programming</a> &raquo;</li>
+      
+    <li>jQuery</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../../../_sources/tutorial/browser_programming/jQuery/index.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="jquery">
+<h1>jQuery<a class="headerlink" href="#jquery" title="Permalink to this headline">¶</a></h1>
+<p>jQuery is a powerful Javascript library which gives you all the browser features
+that are not included in the pure Javascript and which makes the code shorter and
+more readable.</p>
+<p>The main features:</p>
+<ul class="simple">
+<li>DOM element selection</li>
+<li>DOM manipulation</li>
+<li>events</li>
+<li>AJAX</li>
+<li>control of the asynchronous processing</li>
+<li>extensibility</li>
+<li>multi-browser support</li>
+</ul>
+<p>Theoretically jQuery works in the same way in all the browsers. In reality some
+differences are possible, for example the selector uses the
+document.querySelectorAll which behaves a little bit differently depending on
+the browser.</p>
+<p>To use this library in Plezuro, be aware of:</p>
+<ul class="simple">
+<li>The most common use in Javascript is based on the <code class="docutils literal"><span class="pre">$</span></code> variable. In Plezuro it
+breaks the rules of the variable naming so you can access to the jQuery with the
+<code class="docutils literal"><span class="pre">jQuery</span></code> variable or eventually using <code class="docutils literal"><span class="pre">eval('$')</span></code>.</li>
+<li>You must pass the proper variable as the first argument of <code class="docutils literal"><span class="pre">jQuery</span></code> function,
+not as the zero argument.</li>
+<li>In Plezuro everything is an object but jQuery selector must be a true
+Javascript string, so you must invoke the <code class="docutils literal"><span class="pre">toString</span></code> method.</li>
+</ul>
+<div class="literal-block-wrapper container" id="jquery-index-html">
+<div class="code-block-caption"><span class="caption-text">jQuery/index.html</span><a class="headerlink" href="#jquery-index-html" title="Permalink to this code">¶</a></div>
+<div class="highlight-html"><div class="highlight"><pre><span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">&quot;a&quot;</span><span class="p">&gt;</span>a=<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;&lt;</span><span class="nt">input</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;a&quot;</span><span class="p">/&gt;</span>
+<span class="p">&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">&quot;b&quot;</span><span class="p">&gt;</span>b=<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;&lt;</span><span class="nt">input</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;b&quot;</span><span class="p">/&gt;</span>
+<span class="p">&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">&quot;c&quot;</span><span class="p">&gt;</span>c=<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;&lt;</span><span class="nt">input</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;c&quot;</span> <span class="na">disabled</span><span class="p">/&gt;</span>
+<span class="p">&lt;</span><span class="nt">button</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;mainButton&quot;</span><span class="p">&gt;</span>OK<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+
+<span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;../../../plezuro.js&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;main.plez.js&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+
+<span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+</div>
+<p>jQuery/main.plez
+<div class="plezuro_source_container"><iframe class="plezuro_source" src="../../../plezuro_html/doc/web/jQuery/main.plez.html"></iframe></div></p>
+<p>Fortunately, there is a simpler way to call jQuery in Plezuro using a special
+binding. Then you use the <code class="docutils literal"><span class="pre">_jQ</span></code> function and the code looks in the following
+way:</p>
+<p>jQuery_binding/main.plez
+<div class="plezuro_source_container"><iframe class="plezuro_source" src="../../../plezuro_html/doc/web/jQuery_binding/main.plez.html"></iframe></div></p>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../ajax/index.html" class="btn btn-neutral float-right" title="AJAX" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../storage/index.html" class="btn btn-neutral" title="Storage" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2015, Piotr Sroczkowski.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../../',
+            VERSION:'1.0',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../../_static/doctools.js"></script>
+      <script type="text/javascript" src="../../../_static/js/iframes.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>
